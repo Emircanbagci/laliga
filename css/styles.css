@@ -1,0 +1,251 @@
+* body {
+    margin: auto;
+    background-position: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: Arial, sans-serif;
+    
+
+}
+img {
+    max-width: 100px;
+    float: right;
+}
+
+.football {
+    display: inline-block;
+    vertical-align: middle; 
+    width: 50px; 
+    animation: jump 0.5s infinite alternate; 
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+header {
+    background-color: rgb(17, 17, 41);
+
+    box-shadow: 0px 0px 10px black;
+    padding: 20px;
+    overflow: auto; 
+    text-align: center;
+    
+}
+
+h1 {
+    margin: 0;
+    display: inline-block; 
+    font-family: cursive;
+    color: orangered;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+button {
+    background-color: rgb(17, 17, 41);
+    color: orangered;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px black;
+    border: 5px solid rgb(9, 9, 81);
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: rgb(13, 13, 182);
+    transform: scale3d(1.2, 1.2, 1.2);
+}
+
+
+#buttons-container {
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+#buttons-container button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+}
+.hidden {
+    display: none;
+}
+
+
+.tables-container {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    padding-bottom: 15px;
+}
+
+.table-wrapper {
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.matches-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.matches-table th, .matches-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ff0404;
+}
+
+.matches-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+
+.tables-container::-webkit-scrollbar {
+    border: none;
+}
+
+
+.attendance-container {
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.attendance-header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-weight: bold;
+    border-bottom: 2px solid #388E3C;
+}
+.attendance-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+.attendance-data:last-child {
+    border-bottom: none;
+}
+.highlight {
+    background-color: #FFFF99;
+    font-weight: bold;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(12, 176, 0); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .loading-ball {
+    background: url(http://upload.wikimedia.org/wikipedia/en/e/ec/Soccer_ball.svg);
+    background-size: 100px 100px;
+    height: 100px;
+    width: 100px;
+    margin-left: 230px;
+    position: relative;
+    -webkit-animation: roll 4.5s infinite;
+    -moz-animation: roll 4.5s infinite;
+    animation: roll 4.5s infinite;
+  }
+  
+  @-moz-keyframes roll {  
+    0% {left:0px; -moz-transform: rotate(-360deg);}
+    50% {left:1000px; -moz-transform: rotate(360deg);}
+    100% {left:0px; -moz-transform: rotate(-360deg);}
+  }
+  
+  @-webkit-keyframes roll { 
+    0% {left:0px; -webkit-transform: rotate(-360deg);}
+    50% {left:1000px; -webkit-transform: rotate(360deg);}
+    100% {left:0px; -webkit-transform: rotate(-360deg);}
+  }
+  
+  @keyframes roll { 
+    0% {left:0px; transform: rotate(-360deg);}
+    50% {left:1000px; transform: rotate(360deg);}
+    100% {left:0px; transform: rotate(-360deg);}
+  }
+  
+  .world-cup {
+    color: #ffffff;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+  }
+
+
+
+
+  #field {
+    width: 500px;
+    height: 300px;
+    background-color: green;
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  #ball {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 140px;
+    left: 240px;
+  }
+  
+  .goal {
+    width: 10px;
+    height: 100px;
+    background-color: white;
+    position: absolute;
+  }
+  
+  #goal1 {
+    left: -10px;
+    top: 100px;
+  }
+  
+  #goal2 {
+    right: -10px;
+    top: 100px;
+  }
+  
+  #buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; 
+  }
+  
+
+  a {
+    color: orangered;
+    text-decoration: none
+    
+  }
